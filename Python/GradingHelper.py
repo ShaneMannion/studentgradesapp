@@ -13,15 +13,15 @@ class GradingHelper:
         self.courses = courses
         self.enrollments = enrollments
     
-    def listGradesByStudentID(self, studentID):
+    def listGradesByStudentID(self, student_id):
         studentsGrades = []
         for currentEnrollment in self.enrollments.allEnrollments:
-            currentStudentID = int(currentEnrollment.student_ID)
-            if currentStudentID == studentID:
+            currentStudentID = int(currentEnrollment.student_id)
+            if currentStudentID == student_id:
                 for currentCourse in self.courses.allCourses:
-                    if currentEnrollment.course_ID == currentCourse.course_ID:
+                    if currentEnrollment.course_id == currentCourse.course_id:
                         for currentGrade in self.grades.allGrades:
-                            if currentEnrollment.enrollment_ID == currentGrade.enrollment_ID:
-                                studentGrade = [currentEnrollment.student_ID, currentCourse.course_Name, currentGrade.assignment_ID, currentGrade.mark]
+                            if currentEnrollment.enrollment_id == currentGrade.enrollment_id:
+                                studentGrade = [currentEnrollment.student_id, currentCourse.course_name, currentGrade.assignment_id, currentGrade.mark]
                                 studentsGrades.append(studentGrade)
         return studentsGrades

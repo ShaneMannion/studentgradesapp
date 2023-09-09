@@ -6,7 +6,7 @@ from Courses import Courses
 from EnrollmentHelper import EnrollmentHelper
 from GradingHelper import GradingHelper
 from flask import Flask, jsonify, request
-import json
+
 
 app = Flask(__name__)
 

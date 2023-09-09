@@ -8,7 +8,7 @@ class Grades:
     allGrades= []
 
     def addGrade(self, grade):
-        if grade.assignment_ID > 0:
+        if grade.assignment_id > 0:
             self.allGrades.append(grade)
             return True
         else:
@@ -19,15 +19,15 @@ class Grades:
         rowCounter = 0
         if Utilities.isItTest():
             with open('./../TestData/SampleGradeData.csv', 'r') as csvfile:
-                readCSV = csv.reader(csvfile, delimiter=',')
+                read_csv = csv.reader(csvfile, delimiter=',')
                 try: 
-                    for row in readCSV:
+                    for row in read_csv:
                         rowCounter = rowCounter +1
                         if rowCounter > 1:
-                            enrollment_ID= row[0]
-                            assignment_ID= row[1]
+                            enrollment_id= row[0]
+                            assignment_id= row[1]
                             mark=row[2]
-                            grade = Grade(enrollment_ID, assignment_ID, mark)
+                            grade = Grade(enrollment_id, assignment_id, mark)
                             #TODO - add a null check and reset here?
                             self.allGrades.append(grade)
                             lastRow = row
@@ -38,7 +38,7 @@ class Grades:
         else: 
             cur = conn.cursor()
             cur.execute("SELECT * FROM Grades")
-            for (enrollment_id, assignment_ID, mark) in cur:
+            for (enrollment_id, assignment_id, mark) in cur:
                 grade = Grade(enrollment_id, assignment_ID, mark)
                 self.allGrades.append(grade)            
         return len(self.allGrades)

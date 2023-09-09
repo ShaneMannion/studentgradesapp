@@ -1,18 +1,31 @@
+"""
+Data Object for rows from Student table
+"""
+
 class Student:
+    """
+    Student class
+    """
 
-    student_ID=0
-    first_Name="" 
+    student_id=0
+    first_name=""
     surname=""
-    date_Of_Birth=""
+    date_of_birth=""
 
-    def __init__(self, student_ID, first_Name, surname, date_Of_Birth):
-        self.student_ID = student_ID
-        self.first_Name = first_Name
+    def __init__(self, student_id, first_name, surname, date_of_birth):
+        self.student_id = student_id
+        self.first_name = first_name
         self.surname = surname
-        self.date_Of_Birth = date_Of_Birth
+        self.date_of_birth = date_of_birth
 
     def getSurname(self):
+        """
+        Returns surname from this data object
+        """
         return self.surname
 
     def student_to_dict(self):
-        return {"student_ID": self.student_ID, "first_Name": self.first_Name, "surname": self.surname, "date_Of_Birth": self.date_Of_Birth}
+        """
+        Used to iterate over the object as part of conversion to json
+        """
+        return {"student_ID": self.student_id, "first_Name": self.first_name, "surname": self.surname, "date_Of_Birth": self.date_of_birth}

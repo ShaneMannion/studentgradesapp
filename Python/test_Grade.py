@@ -1,13 +1,13 @@
 from Grade import Grade
 import pytest
 
-enrollment_ID=1
-assignment_ID=2
+enrollment_id=1
+assignment_id=2
 mark=80
 
 
 def testCreateGradeAndReturnDetails():
-    grade = Grade(enrollment_ID, assignment_ID, mark)
-    gradedMark = grade.getGradeDetails(enrollment_ID, assignment_ID)
+    grade = Grade(enrollment_id, assignment_id, mark)
+    gradedMark = grade.getGradeDetails()
 
     assert gradedMark == mark

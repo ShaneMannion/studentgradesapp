@@ -1,14 +1,14 @@
 from Enrollment import Enrollment
 import pytest
 
-enrollment_ID=1
-course_ID=2
-student_ID=3
+enrollment_id=1
+course_id=2
+student_id=3
 
 
-def testCreateEnrollmentAndReturnDeatils():
-    enrollment = Enrollment(enrollment_ID, course_ID, student_ID)
-    enrolledCourseID, enrolledStudentID = enrollment.getEnrollmentDetails(enrollment_ID)
+def testCreateEnrollmentAndReturnDetails():
+    enrollment = Enrollment(enrollment_id, course_id, student_id)
+    enrolledCourseID, enrolledStudentID = enrollment.getEnrollmentDetails()
 
-    assert enrolledCourseID == course_ID
-    assert enrolledStudentID == student_ID
+    assert enrolledCourseID == course_id
+    assert enrolledStudentID == student_id

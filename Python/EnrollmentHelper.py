@@ -11,15 +11,15 @@ class EnrollmentHelper:
         self.enrollments = enrollments
         self.students = students
     
-    def listStudentsByCourseID(self, courseID):
+    def listStudentsByCourseID(self, course_id):
         enrolledStudents = []
         json_string=""
 
         for currentEnrollment in self.enrollments.allEnrollments:
-            currentCourseID = int(currentEnrollment.course_ID)
-            if currentCourseID == courseID:
+            currentCourseID = int(currentEnrollment.course_id)
+            if currentCourseID == course_id:
                 for currentStudent in self.students.allStudents:
-                    if currentStudent.student_ID == currentEnrollment.student_ID:
+                    if currentStudent.student_id == currentEnrollment.student_id:
                         enrolledStudents.append(currentStudent)
 
         for enrolledStudent in enrolledStudents:

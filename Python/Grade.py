@@ -4,10 +4,10 @@ class Grade:
     assignment_ID = 0
     mark = 0
 
-    def __init__(self, enrollment_ID, assignment_ID, mark):
-        self.enrollment_ID = enrollment_ID
-        self.assignment_ID = assignment_ID
+    def __init__(self, enrollment_id, assignment_id, mark):
+        self.enrollment_id = enrollment_id
+        self.assignment_id = assignment_id
         self.mark = mark
 
-    def getGradeDetails(self, enrollment_ID, assignment_ID):
+    def getGradeDetails(self):
         return self.mark

@@ -4,10 +4,10 @@ class Course:
     course_Name = ""
     level = ""
 
-    def __init__(self, course_ID, course_Name, level):
-        self.course_ID = course_ID
-        self.course_Name = course_Name
+    def __init__(self, course_id, course_name, level):
+        self.course_id = course_id
+        self.course_name = course_name
         self.level = level
 
     def getCourseName(self):
-        return self.course_Name
+        return self.course_name

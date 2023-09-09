@@ -1,13 +1,13 @@
 class Enrollment:
 
-    enrollment_ID = 0 
-    course_ID = ""
-    student_ID = ""
+    enrollment_id = 0 
+    course_id = ""
+    student_id = ""
 
-    def __init__(self, enrollment_ID, course_ID, student_ID):
-        self.enrollment_ID = enrollment_ID
-        self.course_ID = course_ID
-        self.student_ID = student_ID
+    def __init__(self, enrollment_id, course_id, student_id):
+        self.enrollment_id = enrollment_id
+        self.course_id = course_id
+        self.student_id = student_id
 
-    def getEnrollmentDetails(self, enrollment_ID):
-        return self.course_ID, self.student_ID
+    def getEnrollmentDetails(self):
+        return self.course_id, self.student_id

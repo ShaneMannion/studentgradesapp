@@ -7,7 +7,7 @@ class Enrollments:
     allEnrollments = []
 
     def addEnrollment(self, enrollment):
-        if enrollment.enrollment_ID > 0:
+        if enrollment.enrollment_id > 0:
             self.allEnrollments.append(enrollment)
             return True
         else:
@@ -23,10 +23,10 @@ class Enrollments:
                     for row in readCSV:
                         rowCounter = rowCounter +1
                         if rowCounter > 1:
-                            enrollment_ID= row[0]
-                            course_ID= row[1]
-                            student_ID=row[2]
-                            enrollment = Enrollment(enrollment_ID, course_ID, student_ID)
+                            enrollment_id= row[0]
+                            course_id= row[1]
+                            student_id=row[2]
+                            enrollment = Enrollment(enrollment_id, course_id, student_id)
                             #TODO - add a null check and reset here?
                             self.allEnrollments.append(enrollment)
                             lastRow = row
