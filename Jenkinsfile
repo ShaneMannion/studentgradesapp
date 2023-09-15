@@ -8,12 +8,6 @@ pipeline {
         stage('setup') {
             steps {
                 sh 'pwd'
-                sh 'ls -lrt'
-                sh 'cd Python'
-                sh 'pwd'
-                sh 'ls -lrt'
-                sh 'pip3 -V'    
-                sh "pwd"
                 dir('Python') {
                     sh "pwd"
                     sh 'ls -lrt'
