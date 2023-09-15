@@ -27,7 +27,6 @@ class Enrollments:
                             course_id= row[1]
                             student_id=row[2]
                             enrollment = Enrollment(enrollment_id, course_id, student_id)
-                            #TODO - add a null check and reset here?
                             self.allEnrollments.append(enrollment)
                             lastRow = row
                         else:

@@ -69,7 +69,7 @@ resource "aws_security_group" "instance" {
 
   #HTTP
   ingress {
-    description = "Allow SSH traffic"
+    description = "Allow HTTP traffic"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"

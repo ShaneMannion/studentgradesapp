@@ -7,7 +7,7 @@ import pytest
 courses = Courses()
 
 def testBulkLoadCourses():
-    # clear doesn't work  ====>>>>    Courses.clearCoursesData()
+    courses.allCourses.clear()
     assert courses.bulkLoad() == 12
 
 def testAddOneCourse():
