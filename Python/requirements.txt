@@ -3,7 +3,7 @@ attrs==22.2.0
 blinker==1.6.2
 cffi==1.15.1
 click==8.1.6
-configparser==6.0.0
+configparser==5.0.0
 dill==0.3.7
 docutils==0.20.1
 Flask==2.3.2
