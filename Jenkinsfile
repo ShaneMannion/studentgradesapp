@@ -15,11 +15,13 @@ pipeline {
                 sh 'pip3 -V'    
                 sh "pwd"
                 dir('Python') {
-                sh "pwd"
+                    sh "pwd"
+                    sh 'pip3 install requirements.txt'
+                    sh 'pytest'
                 }
                 sh "pwd"
-                sh 'python3 -version'
-                sh 'pip3 install requirements.txt'
+                sh 'python3 --version'
+
             }
         }
         stage('Unit Test') {
