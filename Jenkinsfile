@@ -5,14 +5,19 @@ pipeline {
         }
     }
     stages {
+        stage('setup') {
+            steps {
+                sh 'cd ./Python && pip3 install requirements.txt'
+            }
+        }
         stage('Unit Test') {
             steps {
-                sh 'cd ./Python && pytest'
+                sh 'pytest'
             }
         }
         stage('Code review') {
             steps {
-                sh 'cd ./Python && pylint'
+                sh 'pylint'
             }
         }  
     }
