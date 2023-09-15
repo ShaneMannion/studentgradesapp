@@ -12,8 +12,13 @@ pipeline {
                 sh 'cd Python'
                 sh 'pwd'
                 sh 'ls -lrt'
-                sh 'pip3 -V'
-                sh 'python -version'
+                sh 'pip3 -V'    
+                sh "pwd"
+                dir('Python') {
+                sh "pwd"
+                }
+                sh "pwd"
+                sh 'python3 -version'
                 sh 'pip3 install requirements.txt'
             }
         }
