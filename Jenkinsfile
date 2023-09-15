@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Unit Test') {
             steps {
-                sh 'pytest'
+                sh 'cd ./Python && pytest'
             }
         }
         stage('Code review') {
             steps {
-                sh 'pylint'
+                sh 'cd ./Python && pylint'
             }
         }  
     }
