@@ -9,12 +9,12 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -lrt'
-                sh 'cd ./Python'
+                sh 'cd Python'
                 sh 'pwd'
                 sh 'ls -lrt'
                 sh 'pip3 -V'
                 sh 'python -version'
-                sh 'cd ./Python && pip3 install requirements.txt'
+                sh 'pip3 install requirements.txt'
             }
         }
         stage('Unit Test') {
