@@ -17,7 +17,7 @@ pipeline {
                 dir('Python') {
                     sh "pwd"
                     sh 'ls -lrt'
-                    sh 'pip3 install requirements.txt'
+                    sh 'pip3 install -r requirements.txt'
                     sh 'pytest'
                 }
                 sh "pwd"
