@@ -15,7 +15,7 @@ jsonify==0.4
 lazy-object-proxy==1.7.0
 MarkupSafe==2.0.0
 mccabe==0.6.0
-mysql-connector-python==8.0.0
+mysql-connector-python==8.0.20
 packaging==21.0
 platformdirs==3.8.0
 pluggy==1.0.0
