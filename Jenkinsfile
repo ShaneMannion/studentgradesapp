@@ -11,9 +11,9 @@ pipeline {
                 dir('Python') {
                     sh "pwd"
                     sh 'ls -lrt'
+                    sh "python -m venv grades-app-env"
+                    sh "source grades-app-env/bin/activate"
                     sh 'pip3 install -r requirements.txt'
-                    sh "virtualenv --python=/usr/bin/python venv"
-                    sh "export TERM='linux'"   
                     sh 'pylint --rcfile=pylint.cfg funniest/ $(find . -maxdepth 1 -name "*.py" -print) --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > pylint.log || echo "pylint exited with $?"'
                     sh "rm -r venv/"
                     
