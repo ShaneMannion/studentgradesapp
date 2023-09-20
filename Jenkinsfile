@@ -16,7 +16,7 @@ pipeline {
                     sh 'pip3 install -r requirements.txt'
                     //sh 'pylint --rcfile=pylint.cfg funniest/ $(find . -maxdepth 1 -name "*.py" -print) --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > pylint.log || echo "pylint exited with $?"'
                     sh 'pylint *.py > pylint_out.txt'
-                    sh "sed 'x;$!d' pylint_out.txt"
+                    sh '''sed 'x;$!d' pylint_out.txt'''
                     sh "rm -r venv/"
                     echo "linting Success, Generating Report"
 
