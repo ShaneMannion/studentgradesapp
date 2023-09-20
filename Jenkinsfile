@@ -14,16 +14,14 @@ pipeline {
                     sh "python3 -m venv grades-app-env"
                     sh "source grades-app-env/bin/activate"
                     sh 'pip3 install -r requirements.txt'
-                    sh 'pylint --rcfile=pylint.cfg funniest/ $(find . -maxdepth 1 -name "*.py" -print) --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > pylint.log || echo "pylint exited with $?"'
+                    //sh 'pylint --rcfile=pylint.cfg funniest/ $(find . -maxdepth 1 -name "*.py" -print) --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > pylint.log || echo "pylint exited with $?"'
+                    sh 'pylint *.py > pylint_out.txt'
+                    sh "sed 'x;$!d' pylint_out.txt"
                     sh "rm -r venv/"
-                    
                     echo "linting Success, Generating Report"
 
                     warnings canComputeNew: false, canResolveRelativePaths: false, defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', parserConfigurations: [[parserName: 'PyLint', pattern: '*']], unHealthy: ''
                 }
-                sh "pwd"
-                sh 'python3 --version'
-
             }
         }
         stage('Unit Test') {
