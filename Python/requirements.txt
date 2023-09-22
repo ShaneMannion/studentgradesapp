@@ -1,4 +1,4 @@
-astroid==2.0.0
+astroid==2.1.0
 attrs==22.2.0
 blinker==1.6.2
 cffi==1.15.1
@@ -21,7 +21,7 @@ platformdirs==3.8.0
 pluggy==1.0.0
 protobuf==4.21.0
 pycparser==2.19
-pylint==2.0.0
+pylint==2.1.0
 pytest==7.1.0
 six==1.15.0
 tomlkit==0.10.1
