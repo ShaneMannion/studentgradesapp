@@ -1,4 +1,4 @@
-astroid==2.15.6
+astroid==2.0.0
 attrs==22.2.0
 blinker==1.6.2
 cffi==1.15.1
@@ -13,7 +13,7 @@ itsdangerous==2.0.0
 Jinja2==3.0.0
 jsonify==0.4
 lazy-object-proxy==1.7.0
-MarkupSafe==2.0.0
+MarkupSafe==2.1.1
 mccabe==0.6.0
 mysql-connector-python==8.0.20
 packaging==21.0
@@ -21,10 +21,10 @@ platformdirs==3.8.0
 pluggy==1.0.0
 protobuf==4.21.0
 pycparser==2.19
-pylint==2.16.0
+pylint==2.0.0
 pytest==7.1.0
 six==1.15.0
-tomlkit==0.10.0
+tomlkit==0.10.1
 types-mysqlclient==2.1.0
-Werkzeug==2.2.0
+Werkzeug==2.2.2
 wrapt==1.10.0
