@@ -5,7 +5,7 @@ cffi==1.15.1
 click==8.1.6
 configparser==5.0.0
 dill==0.3.7
-docutils==0.20.1
+docutils==0.20.0
 Flask==2.2.5
 iniconfig==1.0.0
 isort==5.9.0
@@ -21,7 +21,7 @@ platformdirs==3.8.0
 pluggy==1.0.0
 protobuf==4.21.0
 pycparser==2.19
-pylint==2.1.0
+pylint==2.9.3
 pytest==7.1.0
 six==1.15.0
 tomlkit==0.10.1

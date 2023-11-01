@@ -39,6 +39,6 @@ class Grades:
             cur = conn.cursor()
             cur.execute("SELECT * FROM Grades")
             for (enrollment_id, assignment_id, mark) in cur:
-                grade = Grade(enrollment_id, assignment_ID, mark)
+                grade = Grade(enrollment_id, assignment_id, mark)
                 self.allGrades.append(grade)            
         return len(self.allGrades)
