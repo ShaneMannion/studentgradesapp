@@ -1,4 +1,4 @@
-astroid==2.1.0
+astroid==2.6.2
 attrs==22.2.0
 blinker==1.6.2
 cffi==1.15.1
@@ -27,4 +27,4 @@ six==1.15.0
 tomlkit==0.10.1
 types-mysqlclient==2.1.0
 Werkzeug==2.2.2
-wrapt==1.10.0
+wrapt==1.11.0
