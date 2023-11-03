@@ -16,19 +16,10 @@ pipeline {
                     sh 'pip3 install -r requirements.txt'
                     sh 'pytest'
                     sh 'pylint *.py'
+                    sh "deactivate"
                 }
             }
         }
-        stage('Unit Test') {
-            steps {
-                sh 'pytest'
-            }
-        }
-        stage('Teardown') {
-            steps {
-                sh "rm -r venv/"
-            }
-        }  
     }
     post {
         success {
