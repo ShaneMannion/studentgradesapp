@@ -5,13 +5,16 @@ pipeline {
         }
     }
     stages {
-        stage('setup') {
+        stage('Lint') {
+            steps {
+                    sh 'pip3 install -r requirements.txt'
+                    sh 'pylint ./Python'
+            }
+        }
+        stage('Test') {
             steps {
                 dir('Python') {
-                    sh 'pip3 install -r requirements.txt'
                     sh 'pytest'
-                    sh 'pylint *.py'
-                    sh 'ls -lrt'
                 }
             }
         }
