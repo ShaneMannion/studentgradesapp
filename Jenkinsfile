@@ -9,8 +9,9 @@ pipeline {
             steps {               
                 dir('Python') {
                     sh 'pip3 install -r requirements.txt'
+                    sh 'pylint ./Python'
                 }
-                sh 'pylint ./Python'
+
             }
         }
         stage('Test') {
