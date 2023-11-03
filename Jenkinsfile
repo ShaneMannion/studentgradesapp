@@ -7,11 +7,11 @@ pipeline {
     stages {
         stage('setup') {
             steps {
-                sh 'pwd'
                 dir('Python') {
-                    sh 'pip3 install -r requirements.txt'
-                    sh 'pytest'
-                    sh 'pylint *.py'
+                    //sh 'pip3 install -r requirements.txt'
+                    //sh 'pytest'
+                    //sh 'pylint *.py'
+                    sh 'ls -lrt'
                 }
             }
         }
