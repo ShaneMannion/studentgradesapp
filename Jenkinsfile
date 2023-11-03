@@ -16,12 +16,4 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            echo 'Job completed successfully'
-        }
-        failure {
-            echo 'Job failed'
-        }
-    }
 }
